@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <!--Home-->
+    <section class="home" id="home">
+        <div class="home-texto container">
+            <h2 class="home-titulo">Métodos Contraceptivos</h2>
+            <span class="home-subtitulo">Opções e Eficácia</span>
+        </div>
+    </section>
+
+
+
+    <!--Posts-->
+    <section class="post container">
+        {% for post in posts %}
+        <div class="post-caixa hormonal">
+            <img src="assets/hormonal.png" alt="" class="post-img"> 
+            <h2 class="categoria"{{psot.categria}}</h2>
+            <a href="hormonais.html" class="post-titulo">{{post.titulo}}</a>
+            <p class="post-descricao">{{post.titulo}}
+                São métodos à base de formas sintéticas dos hormônios femininos estrogênio e progesterona. Alguns desses métodos combinam os dois hormônios, enquanto outros têm apenas progesterona. 
+            </p>
+        </div>
+        {% endfor %}
+    </section>
+
+    {% endblock %}
