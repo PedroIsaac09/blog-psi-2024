@@ -117,8 +117,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-media_root = 'media/'
-media_url  = 'media/'
+MEDIA_ROOT =  BASE_DIR / 'media/' #pasta onde django armazena arquivos 
+MEDIA_URL  = 'media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
