@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% block title %}Postagem{% endblock %}
+{% load static %}
+{% block title %}{{post.titulo}}{% endblock %}
 
 
 {% block content %}
@@ -7,11 +8,16 @@
     <section class="post-cabecalho">
         <div class="conteudo-cabecalho post-container">
             <!--Voltar Para a Home-->
-            <a href="index.html" class="voltar-home">Voltar para a Home</a>
+            <a href="{% url "index" %}" class="voltar-home">Voltar para a Home</a>
             <!--Título-->
             <h1 class="cabecalho-titulo">{{ post.titulo }}</h1>
             <!--Imagem do Post-->
-            <img src="{{post.imagem.url}}" alt="" class="cabecalho-img">
+            {% if post.imagem %}
+                <img src="{{post.imagem.url}}" alt="" class="cabecalho-img">
+            {% else %}
+                <img src="{% static "assets/place.png" %}" alt="" class="cabecalho-img">
+            {% endif %}
+        
         </div>
     </section>
 
