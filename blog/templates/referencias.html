@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title%}Referências{%endblock%}
+
+{% block content %}
+
+    <!--Conteúdo do Post-->
+    <section class="post-cabecalho">
+        <div class="conteudo-cabecalho post-container">
+            <!--Voltar Para a Home-->
+            <a href="{% url "index" %}" class="voltar-home">Voltar para Home</a>
+            <!--Título-->
+            <h1 class="cabecalho-titulo">Referências</h1><!--Falta alterar o título do cabeçalho-->
+            <!--Imagem do Post-->
+            <img src="{% static "assets/loucosporpontos.jpeg" %}" alt="" class="cabecalho-img">
+        </div>
+    </section>
+
+    <!--Posts-->
+    <section class="post-conteudo post-container">
+        <h2 class="sub-titulo">Links das referências utilizadas como fonte de pesquisa:</h2><!--Falta alterar o subtítulo-->
+
+        <a href="https://www.dedicae.com.br/contraceptivos-hormonais-como-funcionam/" class="link_ref">Contraceptivos Hormonais</a>
+        <a href="https://www.fsfx.com.br/usisaude/metodos-de-barreira/" class="link_ref">Métodos de Barreira</a>
+        <a href="https://www.febrasgo.org.br/pt/noticias/item/38-contraceptivos-cirurgicos-uma-escolha-definitiva" class="link_ref">Contraceptivos Cirúrgicos</a>
+        <a href="https://sanarmed.com/metodos-comportamentais-ou-naturais-de-anticoncepcao-colunistas/" class="link_ref">Métodos Comportamentais</a>
+        <a href="https://www.todamateria.com.br/metodos-contraceptivos/" class="link_ref">Métodos Contraceptivos</a>
+        <a href="https://www.tuasaude.com/metodos-contraceptivos/" class="link_ref">Métodos Contraceptivos</a>
+        <a href="https://www.mdsaude.com/ginecologia/anticoncepcionais/metodos-anticoncepcionais/" class="link_ref">Métodos Anticoncepcionais</a>
+    </section>
+
+{% endblock %}
